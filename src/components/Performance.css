@@ -1,0 +1,81 @@
+/* Container */
+.performance-container {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header */
+  .performance-container h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Vessel Selection */
+  .vessel-selection {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .select-label {
+    font-size: 18px;
+  }
+  
+  .vessel-dropdown {
+    font-size: 16px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  /* Reports Section */
+  .reports-section {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .section-title {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Report List */
+  .report-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .report-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .report-details {
+    font-size: 16px;
+  }
+  
+  .report-info {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+  }
+  
+  /* No Reports Message */
+  .no-reports-message {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin-top: 20px;
+  }
+  

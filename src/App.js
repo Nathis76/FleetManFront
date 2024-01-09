@@ -1,24 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Home from './components/Home';
+import Login from './components/Login';
+import Logout from './components/Logout';
+import Dashboard from './components/Dashboard';
+import Performance from './components/Performance';
+import Map from './components/Map';
+import Navigation from './components/Navigation';
+import { Routes, Route, Link, Navigate, useLocation } from 'react-router-dom';
+import { useState } from 'react';
 
 function App() {
+  const [auth, setAuth] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Row>
+        <Col>
+          <Navigation />
+          <Routes>
+            <Route path="/" element={<Login setAuth={setAuth} />} />
+            <Route path="/logout" element={<Logout setAuth={setAuth} />} />
+            <Route path="/dashboard" element={auth ? <Dashboard /> : <Navigate to="/" />} />
+            <Route path="/performance" element={auth ? <Performance /> : <Navigate to="/" />} />
+            <Route path="/map" element={auth ? <Map /> : <Navigate to="/" />} />
+            <Route path="/performance/:vesselId" element={<Performance />} />
+            <Route path="*" element={<Navigate to="/login" />} />
+          </Routes>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
